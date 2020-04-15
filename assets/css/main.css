@@ -178,7 +178,7 @@ p, ul, ol, dl, table, blockquote, form {
     align-items: flex-start; }
   .row.aln-middle {
     align-items: center; }
-  .row.aln-bottom {
+  .row.aln--bottom {
     align-items: flex-end; }
   .row > .imp {
     order: -1; }
@@ -957,13 +957,28 @@ button,
   input[type="reset"].style1,
   button.style1,
   .button.style1 {
+
     background: #e97770 url("images/overlay.png");
     color: #fff; }
+@-webkit-keyframes rotating {
+  from{
+    -webkit-transform: rotate(0deg) scale(1);
+    background-color: white;
+  }to{
+     -webkit-transform: rotate(360deg) scale(2);
+    background-color: #1f232b;
+     }
+}
+.rotating:hover {
+  transition: transform .2s;
+  -webkit-animation: rotating 1s linear;
+}
     input[type="button"].style1:hover,
     input[type="submit"].style1:hover,
     input[type="reset"].style1:hover,
     button.style1:hover,
     .button.style1:hover {
+
       background-color: #f98780; }
     input[type="button"].style1:active,
     input[type="submit"].style1:active,
