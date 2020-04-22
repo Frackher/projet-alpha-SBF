@@ -194,20 +194,20 @@
 
 					<!-- Contact Form -->
 					<section  id="contact">
-						<form method="post" action="#">
+						<form id="myform" method="post" action="">
 							<div class="row gtr-50">
 								<div class="col-6 col-12-small">
 									<input type="text" name="nom" id="contact-name" placeholder="Nom"/>
 								</div>
 								<div class="col-6 col-12-small">
-									<input type="text" name="email" id="contact-email" placeholder="Email"/>
+									<input type="email" name="email" id="contact-email" placeholder="Email"/>
 								</div>
 								<div class="col-12">
 									<textarea name="message" id="contact-message" placeholder="Message" rows="4"></textarea>
 								</div>
 								<div class="col-12">
 									<ul class="actions">
-										<li><input type="submit" class="style1" value="Envoyer" /></li>
+										<li><input id="envoyer" type="submit" class="style1" value="Envoyer" /></li>
 									</ul>
 								</div>
 							</div>
@@ -278,6 +278,7 @@
 <script src="assets/js/breakpoints.min.js"></script>
 <script src="assets/js/util.js"></script>
 <script src="assets/js/main.js"></script>
+<script src="test.js"></script>
 
 </body>
 </html>
