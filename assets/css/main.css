@@ -960,19 +960,11 @@ button,
 
     background: #e97770 url("images/overlay.png");
     color: #fff; }
-@-webkit-keyframes rotating {
-  from{
-    -webkit-transform: rotate(0deg) scale(1);
-    background-color: white;
-  }to{
-     -webkit-transform: rotate(360deg) scale(2);
-    background-color: #1f232b;
-     }
+
+.feature-list h3:hover::before{
+  filter: invert();
 }
-.rotating:hover {
-  transition: transform .2s;
-  -webkit-animation: rotating 1s linear;
-}
+
     input[type="button"].style1:hover,
     input[type="submit"].style1:hover,
     input[type="reset"].style1:hover,
@@ -1130,14 +1122,16 @@ ul.actions {
     line-height: 1;
     text-transform: none !important;
     font-family: 'Font Awesome 5 Free';
-    font-weight: 400; }
-  .icon:before {
+    font-weight: 400;
+    }
+  .icon:before{
     line-height: inherit;
-    font-size: 1.25em; }
-  .icon > .label {
+    font-size: 1.25em;}
+  .icon> .label {
     display: none; }
   .icon.solid:before {
-    font-weight: 900; }
+    font-weight: 900;
+  }
   .icon.brands:before {
     font-family: 'Font Awesome 5 Brands'; }
 
