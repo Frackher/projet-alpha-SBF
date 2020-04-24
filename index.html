@@ -20,7 +20,7 @@
 		<!-- Logo -->
 		<div id="logo">
 			<h1><a href="index.html">Projet AlphA</a></h1>
-			<p>Apprenez à vous devenir une meilleure version de vous même</p>
+			<p>Apprenez à devenir une meilleure version de vous-même</p>
 		</div>
 
 		<!-- Nav -->
@@ -104,7 +104,7 @@
 						<div class="col-6 col-12-medium">
 							<section>
 								<h3 class="icon solid fa-phone-slash">Le silence est d'or</h3>
-								<p>Inutile d'inquiétez vos proches en cas de boutons verts ou de pertes de cheveux : les communications externes sont interdites pendant le traintement.</p>
+								<p>Inutile d'inquiéter vos proches en cas de boutons verts ou de pertes de cheveux : les communications externes sont interdites pendant le traitement.</p>
 							</section>
 						</div>
 						<div class="col-6 col-12-medium">
@@ -116,12 +116,20 @@
 					</div>
 				</div>
 				<ul class="actions special">
-					<li><a href="https://www.23andme.com/en-int/" class="button style1 large rotating">Démarrez</a></li>
-					<li><a href="#" class="button style2 large rotating">+ d'infos</a></li>
+					<li><a href="https://www.23andme.com/en-int/" class="button style1 large">Démarrez</a></li>
+					<li>
+						<a href="#" id="btnPopup" class="button style2 large">+ d'infos</a>
+						<div id="overlay" class="overlay">
+							<div id="popup" class="popup">
+								<span id="btnClose" class="btnClose">&times;</span>
+								<p>
+									"L'édition génomique ou modification localisée de séquence génomique (genome editing pour les anglophones) regroupe un ensemble de techniques de manipulation du génome visant à la modification du matériel (et donc de l'information) génétique. Ces techniques sont plus précises et ciblées que les techniques OGM historiques qui voient ces organismes transformés par transgenèse qui introduit des modifications génétiques au niveau d'un site « au hasard » dans le génome."
+								</p>
+							</div>
+						</div>
+					</li>
 				</ul>
-				<div id="dialog" title="Basic dialog">
-					<p>"L'édition génomique ou modification localisée de séquence génomique (genome editing pour les anglophones) regroupe un ensemble de techniques de manipulation du génome visant à la modification du matériel (et donc de l'information) génétique. Ces techniques sont plus précises et ciblées que les techniques OGM historiques qui voient ces organismes transformés par transgenèse qui introduit des modifications génétiques au niveau d'un site « au hasard » dans le génome."</p>
-				</div>
+
 			</section>
 
 		</div>
@@ -134,31 +142,36 @@
 			<div class="row aln-center">
 				<div class="col-4 col-12-medium">
 					<section class="highlight">
-						<a href="#" class="image featured"><img src="images/pic02.jpg" alt="" /></a>
-						<h3><a href="#">Aliquam diam consequat</a></h3>
-						<p>Eget mattis at, laoreet vel amet sed velit aliquam diam ante, dolor aliquet sit amet vulputate mattis amet laoreet lorem.</p>
+						<a href="#" class="image featured"><img src="assets/css/images/jeune-fille.jpeg" alt="jeune femme"/></a>
+						<h3><a href="#">Nojiko Nami</a></h3>
+						<p>Le projet Alpha m'a beaucoup apporté physiquement et psychologiquement : j'ai été accompagner par un médecin qui a pu changer mon génome afin que mes yeux soient bleus.
+							Cette modification n'est pas douloureuse. Et le suivi des experts est extra-ordinaire. <br/>Lancez-vous ! </p>
 						<ul class="actions">
-							<li><a href="#" class="button style1">Learn More</a></li>
+							<li><a href="#" class="button style1">En savoir plus</a></li>
 						</ul>
 					</section>
 				</div>
 				<div class="col-4 col-12-medium">
 					<section class="highlight">
-						<a href="#" class="image featured"><img src="images/pic03.jpg" alt="" /></a>
-						<h3><a href="#">Nisl adipiscing sed lorem</a></h3>
-						<p>Eget mattis at, laoreet vel amet sed velit aliquam diam ante, dolor aliquet sit amet vulputate mattis amet laoreet lorem.</p>
+						<a href="#" class="image featured"><img src="assets/css/images/vieux.jpg" alt="Vieil homme" /></a>
+						<h3><a href="#">Hervé Frockawiok</a></h3>
+						<p> Avant de connaître le projet Alpha, je vivais ma vie en redoutant le lendemain. Le projet à résolu tout cela :
+							grâce à une modification de l'ADN, les maladies auto-immune, les cancers, les maladies cardiovasculaires ne peuvent plus ce développer. Je profite à 100% de la vie. </br>
+							Merci projet Alpha !
+						</p>
 						<ul class="actions">
-							<li><a href="#" class="button style1">Learn More</a></li>
+							<li><a href="#" class="button style1">En savoir plus </a></li>
 						</ul>
 					</section>
 				</div>
 				<div class="col-4 col-12-medium">
 					<section class="highlight">
-						<a href="#" class="image featured"><img src="images/pic04.jpg" alt="" /></a>
-						<h3><a href="#">Mattis tempus lorem</a></h3>
-						<p>Eget mattis at, laoreet vel amet sed velit aliquam diam ante, dolor aliquet sit amet vulputate mattis amet laoreet lorem.</p>
+						<a href="#" class="image featured"><img src="assets/css/images/couple.jpeg" alt="couple"/></a>
+						<h3><a href="#">La famille Abriel</a></h3>
+						<p>Le projet Alpha une réussite totale ! Nous ne pouvions pas avoir d'enfants dus à une maladie génétique (une petite partie du chromosome Y a été délectée).
+							Et voici que les experts qui participent au projet ont pu modifier le chromosome Y afin de produire des spermatozoïdes sains.</p>
 						<ul class="actions">
-							<li><a href="#" class="button style1">Learn More</a></li>
+							<li><a href="#" class="button style1">En savoir plus</a></li>
 						</ul>
 					</section>
 				</div>
@@ -181,21 +194,20 @@
 
 					<!-- Contact Form -->
 					<section  id="contact">
-						<form method="post" action="#">
+						<form id="myform" method="post" action="">
 							<div class="row gtr-50">
 								<div class="col-6 col-12-small">
-									<input type="text" name="name" id="contact-name" placeholder="Name"/>
+									<input type="text" name="nom" id="contact-name" placeholder="Nom"/>
 								</div>
 								<div class="col-6 col-12-small">
-									<input type="text" name="email" id="contact-email" placeholder="Email"/>
+									<input type="email" name="email" id="contact-email" placeholder="Email"/>
 								</div>
 								<div class="col-12">
 									<textarea name="message" id="contact-message" placeholder="Message" rows="4"></textarea>
 								</div>
 								<div class="col-12">
 									<ul class="actions">
-										<li><input type="submit" class="style1" value="Send" /></li>
-										<li><input type="reset" class="style2" value="Reset" /></li>
+										<li><input id="envoyer" type="submit" class="style1" value="Envoyer" /></li>
 									</ul>
 								</div>
 							</div>
@@ -232,7 +244,7 @@
 								<section>
 									<h3 class="icon solid fa-envelope">Email</h3>
 									<p>
-										<a href="contact@projet-alpha.fr">contact@projet-alpha.fr</a>
+										<a href="mailto:contact@projet-alpha.fr">contact@projet-alpha.fr</a>
 									</p>
 								</section>
 							</div>
@@ -266,6 +278,7 @@
 <script src="assets/js/breakpoints.min.js"></script>
 <script src="assets/js/util.js"></script>
 <script src="assets/js/main.js"></script>
+<script src="test.js"></script>
 
 </body>
 </html>
